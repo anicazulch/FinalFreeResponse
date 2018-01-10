@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Shoe
+comment1.params=
+comment1.target=Shoe()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Pet\r\n
+comment2.params=nm\ on\ sh
+comment2.target=Shoe(java.lang.String,\ boolean,\ int)
+comment3.params=
+comment3.target=int\ getHeight()
+comment4.params=on
+comment4.target=void\ setOn(boolean)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
