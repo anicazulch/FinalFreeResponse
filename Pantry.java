@@ -1,39 +1,44 @@
-public class Pantry 
+public class Pantry implements Comparable <Pantry> 
 {
     // instance variables 
     private SodaCan newSoda;
-    private String typeOfChips;
+    private int numberOfChips;
     /**
      * Constructor for objects of class Pantry
      */
-    public Pantry(SodaCan s, String ch)
+    public Pantry(SodaCan s, int ch)
     {
         // initialise instance variables
         this.newSoda = s;
-        this.typeOfChips = ch;
+        this.numberOfChips = ch;
     }
     // setter for new soda can
-    public SodaCan anotherSoda(SodaCan other){
-        SodaCan moreSoda = new SodaCan(other.sodaFlavor, other.expirationDate);
-        return moreSoda;
+    public void setSoda(SodaCan other){
+        newSoda = other;
+    }
+    
+    public SodaCan getSoda() {
+        return newSoda;
     }
     // setter for type of chips in the pantry
-    public void setChips(String chips){
-        this.typeOfChips = chips;
+    public void setChips(int chips){
+        this.numberOfChips = chips;
     }
     // getter for type of chips
-    public String getChipType(){
-        return this.typeOfChips;
+    public int getChipType(){
+        return this.numberOfChips;
     }
     // toString method to print instance data
     public String toString(){
-        return "There's " + typeOfChips + " in the pantry";
+        return "There's " + numberOfChips + " chips in the pantry";
     }
     // comparable method to compare two types of chips
-    public String compareTo(Pantry other){
-        if(this.typeOfChips == other.typeOfChips)
-            return "They're the same";
+    public int compareTo(Pantry other){
+        if(this.numberOfChips > other.numberOfChips)
+            return 1;
+        else if (this.numberOfChips < other.numberOfChips)
+            return -1;
         else
-            return "They're different";
+            return 0;
     }
 }
