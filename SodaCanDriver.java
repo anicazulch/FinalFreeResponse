@@ -4,9 +4,11 @@ public class SodaCanDriver
         // instantiating two objects of class SodaCan
         SodaCan soda1 = new SodaCan("Sprite", 2018);
         SodaCan soda2 = new SodaCan("CocaCola", 2023);
-        // print toString on first two objects before changeIt
+        // print toString before changeIt
         System.out.println("Soda 1 before– " + soda1);
         System.out.println("Soda 2 before– " + soda2);
+        // print static variable
+        System.out.println("The total number of cans is: " + SodaCan.totalNumOfCans);
         // call on changeIt method
         changeIt(soda1, soda2);
         // print toString after changeIt again
@@ -23,8 +25,6 @@ public class SodaCanDriver
         s2 = soda3;
         // setter on soda2
         s2.setFlavor("DrPepper");
-        // print static variable
-        System.out.println("The total number of cans is: " + SodaCan.totalNumOfCans);
         // print toString after changeIt
         System.out.println("S1– " + s1);
         System.out.println("S2– " + s2);

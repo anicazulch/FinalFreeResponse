@@ -16,23 +16,23 @@ public class Pantry implements Comparable <Pantry>
     public void setSoda(SodaCan other){
         newSoda = other;
     }
-    
-    public SodaCan getSoda() {
-        return newSoda;
-    }
-    // setter for type of chips in the pantry
+    // setter for number of chips in the pantry
     public void setChips(int chips){
         this.numberOfChips = chips;
     }
-    // getter for type of chips
-    public int getChipType(){
+    // getter for new soda can
+    public SodaCan getSoda() {
+        return newSoda;
+    }
+    // getter for number of chips
+    public int getNumberOfChips(){
         return this.numberOfChips;
     }
     // toString method to print instance data
     public String toString(){
         return "There's " + numberOfChips + " chips in the pantry";
     }
-    // comparable method to compare two types of chips
+    // comparable method to compare number of chips
     public int compareTo(Pantry other){
         if(this.numberOfChips > other.numberOfChips)
             return 1;
